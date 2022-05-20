@@ -40,30 +40,30 @@ back.addEventListener("click", () => {
   fetchMonsters();
 });
 
-// const newMonsterForm = document.querySelector('#monsterForm')
+const newMonsterForm = document.querySelector('#monsterForm')
 
-// newMonsterForm.addEventListener('submit', e => {
-//     e.preventDefault()
-//     console.log('prevenetd')
-//     const newFormData = new FormData(e.target)
+newMonsterForm.addEventListener('submit', e => {
+    e.preventDefault()
+    console.log('prevenetd')
+    const newFormData = new FormData(e.target)
 
-//     const monsterName = newFormData.get('name')
-//     const monsterAge = newFormData.get('age')
-//     const monsterDescription = newFormData.get('description')
+    const monsterName = newFormData.get('name')
+    const monsterAge = newFormData.get('age')
+    const monsterDescription = newFormData.get('description')
 
-//     const newMonsterObject = {
-//         name: monsterName,
-//         age: monsterAge,
-//         description: monsterDescription
-//     }
+    const newMonsterObject = {
+        name: monsterName,
+        age: monsterAge,
+        description: monsterDescription
+    }
 
-//     fetch(monsterURL, {
-//         method: 'POST',
-//         headers: {
-//             'Content-type': 'application/json',
-//             'Accept': 'application/json'
-//         },
-//         body: JSON.stringify(newMonsterObject)
-//     }).then(response => response.json())
-//     //   .then(console.log)
-// })
+    fetch(monsterURL, {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(newMonsterObject)
+    }).then(response => response.json())
+    //   .then(console.log)
+})
