@@ -1,5 +1,6 @@
 let pagenumber = 1;
 const monsterContainer = document.querySelector("#monster-container");
+const monsterURL = 'http://localhost:3000/monsters'
 
 fetchMonsters();
 
@@ -65,5 +66,5 @@ newMonsterForm.addEventListener('submit', e => {
         },
         body: JSON.stringify(newMonsterObject)
     }).then(response => response.json())
-    //   .then(console.log)
+      .then(console.log)
 })
